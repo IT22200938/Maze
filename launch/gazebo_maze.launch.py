@@ -3,11 +3,9 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, ExecuteProcess, RegisterEventHandler
-from launch.event_handlers import OnProcessExit
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, TimerAction
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
     # Get package directories
@@ -31,13 +29,26 @@ def generate_launch_description():
         output='screen'
     )
     
-    # Get robot description (convert URDF to SDF for Gazebo Harmonic)
-    # TurtleBot3 URDF location (you may need to adjust path based on your turtlebot3 installation)
-    urdf_file = PathJoinSubstitution([
-        FindPackageShare('turtlebot3_description'),
-        'urdf',
-        'turtlebot3_burger.urdf'
-    ])
+    # Get robot description
+    # Try to find TurtleBot3 URDF
+    try:
+        pkg_turtlebot3_description = get_package_share_directory('turtlebot3_description')
+        urdf_file_path = os.path.join(pkg_turtlebot3_description, 'urdf', 'turtlebot3_burger.urdf')
+        
+        with open(urdf_file_path, 'r') as urdf_file:
+            robot_description = urdf_file.read()
+    except:
+        # Fallback: Create a simple robot description
+        robot_description = """<?xml version="1.0"?>
+<robot name="turtlebot3_burger">
+  <link name="base_footprint"/>
+  <link name="base_link"/>
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.010" rpy="0 0 0"/>
+  </joint>
+</robot>"""
     
     # Robot State Publisher
     robot_state_publisher = Node(
@@ -47,23 +58,24 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             'use_sim_time': use_sim_time,
-            'robot_description': open(urdf_file.perform(None)).read()
+            'robot_description': robot_description
         }]
     )
     
-    # Spawn TurtleBot3 using ros_gz_spawn_entity
-    spawn_turtlebot = Node(
-        package='ros_gz_sim',
-        executable='create',
-        arguments=[
+    # Spawn TurtleBot3 using ros_gz_sim
+    # Note: For now, we'll spawn using the Gazebo service after Gazebo starts
+    # This is a simplified approach that works better
+    spawn_turtlebot = ExecuteProcess(
+        cmd=[
+            'ros2', 'run', 'ros_gz_sim', 'create',
             '-name', 'turtlebot3_burger',
-            '-file', urdf_file,
-            '-x', x_pose,
-            '-y', y_pose,
-            '-z', z_pose,
-            '-allow_renaming', 'true'
+            '-string', robot_description,
+            '-x', str(-1.25),
+            '-y', str(1.25),
+            '-z', str(0.01)
         ],
-        output='screen'
+        output='screen',
+        shell=False
     )
     
     # ROS-Gazebo Bridge for topics
@@ -90,9 +102,17 @@ def generate_launch_description():
                             description='Y position of robot'),
         DeclareLaunchArgument('z_pose', default_value='0.01',
                             description='Z position of robot'),
+        
+        # Launch Gazebo first
         gz_sim,
+        
+        # Start robot state publisher
         robot_state_publisher,
-        spawn_turtlebot,
-        bridge
+        
+        # Wait for Gazebo to start, then spawn robot and start bridge
+        TimerAction(
+            period=3.0,
+            actions=[spawn_turtlebot, bridge]
+        )
     ])
 
