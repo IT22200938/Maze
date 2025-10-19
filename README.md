@@ -19,6 +19,21 @@ Ensure you have completed the setup from the Quick Start Guide:
 - TurtleBot3 packages installed
 - Cartographer and Nav2 packages installed
 
+**Important:** This project uses **Gazebo Harmonic** (new Gazebo), NOT Gazebo Classic.
+
+### Additional Required Packages for Gazebo Harmonic
+
+Install the ROS-Gazebo bridge packages:
+
+```bash
+sudo apt install ros-jazzy-ros-gz-sim
+sudo apt install ros-jazzy-ros-gz-bridge
+sudo apt install ros-jazzy-ros-gz-spawn-entity
+sudo apt install ros-jazzy-ros-gz-interfaces
+```
+
+These packages provide the bridge between ROS 2 and Gazebo Harmonic (gz sim).
+
 ## Project Structure
 
 ```

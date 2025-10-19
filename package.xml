@@ -15,9 +15,9 @@
   <depend>nav_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>nav2_msgs</depend>
-  <depend>gazebo_ros</depend>
-  <depend>gazebo_ros_pkgs</depend>
-  <depend>turtlebot3_gazebo</depend>
+  <depend>ros_gz_sim</depend>
+  <depend>ros_gz_bridge</depend>
+  <depend>ros_gz_spawn_entity</depend>
   <depend>turtlebot3_navigation2</depend>
   <depend>cartographer_ros</depend>
   <depend>nav2_bringup</depend>
