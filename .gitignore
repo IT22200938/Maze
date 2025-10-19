@@ -1,0 +1,46 @@
+# ROS 2
+install/
+build/
+log/
+*.pyc
+__pycache__/
+
+# Python
+*.egg-info/
+dist/
+*.egg
+
+# PyTorch models
+*.pth
+*.pt
+
+# Results and logs
+navigation_results.json
+*.csv
+*.log
+
+# Map files (will be generated)
+maps/*.pgm
+maps/*.yaml
+
+# Backup files
+*~
+*.swp
+*.swo
+.*.swp
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Gazebo
+.gazebo/
+
+# RViz
+*.rviz.bak
+
