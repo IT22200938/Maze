@@ -86,15 +86,15 @@ source /opt/ros/jazzy/setup.bash
 # Install required ROS 2 packages
 sudo apt update
 sudo apt install -y \
-    ros-jazzy-gazebo-ros-pkgs \
+    ros-jazzy-ros-gz-sim \
+    ros-jazzy-ros-gz-bridge \
+    ros-jazzy-ros-gz-interfaces \
     ros-jazzy-slam-toolbox \
     ros-jazzy-navigation2 \
     ros-jazzy-nav2-bringup \
-    ros-jazzy-turtlebot3* \
     ros-jazzy-robot-state-publisher \
     ros-jazzy-joint-state-publisher \
     ros-jazzy-xacro \
-    ros-jazzy-ros-gz \
     python3-pip
 
 # Install Python dependencies
@@ -105,18 +105,18 @@ pip3 install torch numpy
 
 ```bash
 # Create workspace
-mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws/src
+mkdir -p ~/turtlebot3_ws/src
+cd ~/turtlebot3_ws/src
 
 # Clone or copy the package
 cp -r /path/to/turtlebot3_autonav .
 
 # Build the workspace
-cd ~/ros2_ws
+cd ~/turtlebot3_ws
 colcon build --symlink-install
 
 # Source the workspace
-source ~/ros2_ws/install/setup.bash
+source ~/turtlebot3_ws/install/setup.bash
 ```
 
 ## 🎮 Usage

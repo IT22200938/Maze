@@ -14,22 +14,23 @@ Get up and running with TurtleBot3 autonomous navigation in 5 minutes!
 # 1. Install dependencies
 sudo apt update
 sudo apt install -y \
-    ros-jazzy-gazebo-ros-pkgs \
+    ros-jazzy-ros-gz-sim \
+    ros-jazzy-ros-gz-bridge \
+    ros-jazzy-ros-gz-interfaces \
     ros-jazzy-slam-toolbox \
     ros-jazzy-navigation2 \
     ros-jazzy-nav2-bringup \
     ros-jazzy-xacro \
-    ros-jazzy-ros-gz \
     python3-pip
 
 pip3 install torch numpy
 
 # 2. Create workspace and build
-mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws/src
+mkdir -p ~/turtlebot3_ws/src
+cd ~/turtlebot3_ws/src
 cp -r /path/to/turtlebot3_autonav .
 
-cd ~/ros2_ws
+cd ~/turtlebot3_ws
 colcon build --symlink-install
 source install/setup.bash
 ```
@@ -40,7 +41,7 @@ source install/setup.bash
 
 ```bash
 # Terminal 1: Launch everything
-source ~/ros2_ws/install/setup.bash
+source ~/turtlebot3_ws/install/setup.bash
 ros2 launch turtlebot3_autonav full_sim_launch.py
 ```
 

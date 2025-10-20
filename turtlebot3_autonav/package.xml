@@ -26,8 +26,9 @@
   <depend>xacro</depend>
   <depend>robot_state_publisher</depend>
   <depend>joint_state_publisher</depend>
-  <depend>gazebo_ros</depend>
-  <depend>gazebo_plugins</depend>
+  <depend>ros_gz_sim</depend>
+  <depend>ros_gz_bridge</depend>
+  <depend>ros_gz_interfaces</depend>
 
   <!-- SLAM -->
   <depend>slam_toolbox</depend>

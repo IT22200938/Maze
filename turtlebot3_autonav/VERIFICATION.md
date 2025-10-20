@@ -23,7 +23,7 @@ python3 --version       # Should show 3.12+
 Run from project root:
 
 ```bash
-cd ~/ros2_ws/src/turtlebot3_autonav
+cd ~/turtlebot3_ws/src/turtlebot3_autonav
 
 # Check critical files exist
 ls -1 README.md \
@@ -43,7 +43,7 @@ ls -1 README.md \
 ## ✅ Build Verification
 
 ```bash
-cd ~/ros2_ws
+cd ~/turtlebot3_ws
 
 # Clean build
 rm -rf build/ install/ log/
@@ -114,12 +114,13 @@ python3 -c "import torch; import numpy; print('OK')"
 ```
 
 **Required ROS 2 Packages:**
-- [ ] gazebo_ros
+- [ ] ros_gz_sim
+- [ ] ros_gz_bridge
+- [ ] ros_gz_interfaces
 - [ ] slam_toolbox
 - [ ] nav2_bringup
 - [ ] robot_state_publisher
 - [ ] xacro
-- [ ] ros_gz_bridge
 
 **Required Python Packages:**
 - [ ] torch
@@ -294,7 +295,7 @@ cat navigation_logs/all_sessions_nav2.json | python3 -m json.tool
 
 **Solution:**
 ```bash
-source ~/ros2_ws/install/setup.bash
+source ~/turtlebot3_ws/install/setup.bash
 ```
 
 ### Issue: Gazebo crashes immediately
@@ -333,7 +334,7 @@ ros2 lifecycle list
 ```bash
 # Install missing dependencies
 sudo apt install ros-jazzy-rclcpp ros-jazzy-sensor-msgs
-cd ~/ros2_ws
+cd ~/turtlebot3_ws
 colcon build --packages-select turtlebot3_autonav
 ```
 

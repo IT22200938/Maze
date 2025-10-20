@@ -198,9 +198,9 @@
 
 ### Installation
 ```bash
-cd ~/ros2_ws/src
+cd ~/turtlebot3_ws/src
 cp -r /path/to/turtlebot3_autonav .
-cd ~/ros2_ws
+cd ~/turtlebot3_ws
 colcon build --symlink-install
 source install/setup.bash
 ```

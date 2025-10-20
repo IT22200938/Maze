@@ -118,7 +118,7 @@ TOTAL CODE:          ~2,500+ lines
 ================================================================================
 
 1. Build:
-   cd ~/ros2_ws
+   cd ~/turtlebot3_ws
    colcon build --packages-select turtlebot3_autonav
    source install/setup.bash
 
