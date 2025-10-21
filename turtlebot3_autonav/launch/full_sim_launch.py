@@ -23,7 +23,7 @@ def generate_launch_description():
     # Declare launch arguments
     use_sim_time_arg = DeclareLaunchArgument(
         'use_sim_time',
-        default_value='true',
+        default_value='True',
         description='Use simulation clock'
     )
     
@@ -41,25 +41,25 @@ def generate_launch_description():
     
     use_slam_arg = DeclareLaunchArgument(
         'use_slam',
-        default_value='true',
+        default_value='True',
         description='Whether to run SLAM'
     )
     
     use_rviz_arg = DeclareLaunchArgument(
         'use_rviz',
-        default_value='true',
+        default_value='True',
         description='Whether to start RViz2'
     )
     
     enable_safety_arg = DeclareLaunchArgument(
         'enable_safety',
-        default_value='true',
+        default_value='True',
         description='Enable obstacle monitor safety'
     )
     
     enable_recording_arg = DeclareLaunchArgument(
         'enable_recording',
-        default_value='true',
+        default_value='True',
         description='Enable performance recording'
     )
     

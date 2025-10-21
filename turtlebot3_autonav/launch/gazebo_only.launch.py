@@ -6,10 +6,12 @@ Launches only Gazebo with the maze world and TurtleBot3
 """
 
 import os
+import xacro
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, ExecuteProcess
-from launch.substitutions import LaunchConfiguration
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, TimerAction
+from launch.substitutions import LaunchConfiguration, Command
 from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
 from ament_index_python.packages import get_package_share_directory
 
 
@@ -22,9 +24,9 @@ def generate_launch_description():
     urdf_file = os.path.join(pkg_dir, 'urdf', 'turtlebot3_burger.urdf.xacro')
     
     # Process URDF with xacro
-    robot_desc = ExecuteProcess(
-        cmd=['xacro', urdf_file],
-        output='screen'
+    robot_description = ParameterValue(
+        Command(['xacro ', urdf_file]),
+        value_type=str
     )
     
     # Robot state publisher
@@ -34,7 +36,7 @@ def generate_launch_description():
         name='robot_state_publisher',
         output='screen',
         parameters=[{
-            'robot_description': robot_desc.output,
+            'robot_description': robot_description,
             'use_sim_time': True
         }]
     )
@@ -45,18 +47,23 @@ def generate_launch_description():
         output='screen'
     )
     
-    # Spawn robot
-    spawn_robot = Node(
-        package='ros_gz_sim',
-        executable='create',
-        arguments=[
-            '-name', 'turtlebot3_burger',
-            '-topic', '/robot_description',
-            '-x', '0.5',
-            '-y', '0.5',
-            '-z', '0.01'
-        ],
-        output='screen'
+    # Spawn robot - delayed to ensure robot_state_publisher is ready
+    spawn_robot = TimerAction(
+        period=3.0,
+        actions=[
+            Node(
+                package='ros_gz_sim',
+                executable='create',
+                arguments=[
+                    '-name', 'turtlebot3_burger',
+                    '-topic', 'robot_description',
+                    '-x', '0.5',
+                    '-y', '0.5',
+                    '-z', '0.01'
+                ],
+                output='screen'
+            )
+        ]
     )
     
     return LaunchDescription([

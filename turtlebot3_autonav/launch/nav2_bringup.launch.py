@@ -18,7 +18,7 @@ def generate_launch_description():
     # Declare launch arguments
     use_sim_time_arg = DeclareLaunchArgument(
         'use_sim_time',
-        default_value='true',
+        default_value='True',
         description='Use simulation (Gazebo) clock if true'
     )
     
@@ -30,13 +30,13 @@ def generate_launch_description():
     
     autostart_arg = DeclareLaunchArgument(
         'autostart',
-        default_value='true',
+        default_value='True',
         description='Automatically startup the nav2 stack'
     )
     
     use_composition_arg = DeclareLaunchArgument(
         'use_composition',
-        default_value='false',
+        default_value='False',
         description='Use composed bringup if true'
     )
     
