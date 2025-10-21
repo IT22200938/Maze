@@ -1,529 +1,470 @@
-<?xml version='1.0'?>
-<sdf version='1.7'>
-  <model name='maze'>
-    <pose>0.000504 0.045096 0 0 -0 0</pose>
-    <link name='Wall_10'>
-      <collision name='Wall_10_Collision'>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_10_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>-1.24376 -1.01557 0 0 -0 0</pose>
-    </link>
-    <link name='Wall_12'>
-      <collision name='Wall_12_Collision'>
-        <geometry>
-          <box>
-            <size>1.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_12_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>1.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>0.243257 -1.01444 0 0 -0 0</pose>
-    </link>
-    <link name='Wall_13'>
-      <collision name='Wall_13_Collision'>
-        <geometry>
-          <box>
-            <size>1 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_13_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>1 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>0.985799 -0.519443 0 0 -0 1.5708</pose>
-    </link>
-    <link name='Wall_15'>
-      <collision name='Wall_15_Collision'>
-        <geometry>
-          <box>
-            <size>1.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_15_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>1.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>-0.992504 0.245919 0 0 -0 -1.5708</pose>
-    </link>
-    <link name='Wall_16'>
-      <collision name='Wall_16_Collision'>
-        <geometry>
-          <box>
-            <size>1.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_16_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>1.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>-0.247504 -0.505582 0 0 -0 0</pose>
-    </link>
-    <link name='Wall_18'>
-      <collision name='Wall_18_Collision'>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_18_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>-0.504056 0.274449 0 0 -0 1.5708</pose>
-    </link>
-    <link name='Wall_19'>
-      <collision name='Wall_19_Collision'>
-        <geometry>
-          <box>
-            <size>1.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_19_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>1.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>0.240944 0.519449 0 0 -0 0</pose>
-    </link>
-    <link name='Wall_2'>
-      <collision name='Wall_2_Collision'>
-        <geometry>
-          <box>
-            <size>3 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_2_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>3 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>-1.49168 -0.005775 0 0 -0 1.5708</pose>
-    </link>
-    <link name='Wall_20'>
-      <collision name='Wall_20_Collision'>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_20_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>0.983486 0.764449 0 0 -0 1.5708</pose>
-    </link>
-    <link name='Wall_22'>
-      <collision name='Wall_22_Collision'>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_22_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>-0.494684 1.27138 0 0 -0 1.5708</pose>
-    </link>
-    <link name='Wall_24'>
-      <collision name='Wall_24_Collision'>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_24_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>0.487877 1.27646 0 0 -0 1.5708</pose>
-    </link>
-    <link name='Wall_26'>
-      <collision name='Wall_26_Collision'>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_26_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>-0.003241 0.764741 0 0 -0 1.5708</pose>
-    </link>
-    <link name='Wall_28'>
-      <collision name='Wall_28_Collision'>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_28_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>-0.006513 -0.260404 0 0 -0 1.5708</pose>
-    </link>
-    <link name='Wall_31'>
-      <collision name='Wall_31_Collision'>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_31_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>0.5 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>0.485781 0.25703 0 0 -0 -1.5708</pose>
-    </link>
-    <link name='Wall_33'>
-      <collision name='Wall_33_Collision'>
-        <geometry>
-          <box>
-            <size>1 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_33_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>1 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>0.981496 -0.002096 0 0 -0 0</pose>
-    </link>
-    <link name='Wall_4'>
-      <collision name='Wall_4_Collision'>
-        <geometry>
-          <box>
-            <size>3 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_4_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>3 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>1.48452 -0.000466 0 0 -0 -1.5708</pose>
-    </link>
-    <link name='Wall_6'>
-      <collision name='Wall_6_Collision'>
-        <geometry>
-          <box>
-            <size>3 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_6_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>3 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>-0.000809 -1.52147 0 0 -0 0</pose>
-    </link>
-    <link name='Wall_8'>
-      <collision name='Wall_8_Collision'>
-        <geometry>
-          <box>
-            <size>3 0.01 0.2</size>
-          </box>
-        </geometry>
-        <pose>0 0 0.1 0 -0 0</pose>
-      </collision>
-      <visual name='Wall_8_Visual'>
-        <pose>0 0 0.1 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>3 0.01 0.2</size>
-          </box>
-        </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
-          </script>
-          <ambient>1 1 1 1</ambient>
-        </material>
-        <meta>
-          <layer>0</layer>
-        </meta>
-      </visual>
-      <pose>0.000809 1.5148 0 0 -0 0</pose>
-    </link>
-    <static>1</static>
-  </model>
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="turtlebot3_maze">
+    
+    <!-- Physics settings -->
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    
+    <!-- Plugin for Gazebo -->
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <!-- Lighting -->
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <!-- Ground plane -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Maze walls matching the provided diagram -->
+    <!-- Wall parameters: height=0.25m, thickness=0.02m -->
+    <!-- Grid: 6x6 cells, each cell is 0.5m x 0.5m, total 3m x 3m -->
+    <!-- Coordinate system: (0,0) at bottom-left -->
+    
+    <!-- ========== OUTER BOUNDARY WALLS ========== -->
+    
+    <!-- Top wall (complete) -->
+    <model name="wall_top">
+      <static>true</static>
+      <pose>1.5 3.0 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>3.02 0.02 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>3.02 0.02 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Bottom wall - left section (0 to 0.5) -->
+    <model name="wall_bottom_left">
+      <static>true</static>
+      <pose>0.25 0.0 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.52 0.02 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.52 0.02 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Bottom wall - right section (1.5 to 3.0) -->
+    <model name="wall_bottom_right">
+      <static>true</static>
+      <pose>2.25 0.0 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>1.52 0.02 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>1.52 0.02 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Left wall - top section (0.5 to 3.0) -->
+    <model name="wall_left">
+      <static>true</static>
+      <pose>0.0 1.75 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.02 2.52 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.02 2.52 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Right wall (complete) -->
+    <model name="wall_right">
+      <static>true</static>
+      <pose>3.0 1.5 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.02 3.02 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.02 3.02 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ========== INTERNAL HORIZONTAL WALLS ========== -->
+    
+    <!-- Horizontal wall at y=2.5, x=0.5 to x=1.0 -->
+    <model name="wall_h_y2_5_x0_5">
+      <static>true</static>
+      <pose>0.75 2.5 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.5 0.02 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.5 0.02 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Horizontal wall at y=2.0, x=0.5 to x=1.0 -->
+    <model name="wall_h_y2_0_x0_5">
+      <static>true</static>
+      <pose>0.75 2.0 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.5 0.02 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.5 0.02 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Horizontal wall at y=2.0, x=2.0 to x=2.5 -->
+    <model name="wall_h_y2_0_x2_0">
+      <static>true</static>
+      <pose>2.25 2.0 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.5 0.02 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.5 0.02 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Horizontal wall at y=1.5, x=1.0 to x=2.5 -->
+    <model name="wall_h_y1_5_x1_0">
+      <static>true</static>
+      <pose>1.75 1.5 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>1.5 0.02 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>1.5 0.02 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Horizontal wall at y=1.0, x=0.5 to x=2.0 -->
+    <model name="wall_h_y1_0_x0_5">
+      <static>true</static>
+      <pose>1.25 1.0 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>1.5 0.02 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>1.5 0.02 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Horizontal wall at y=0.5, x=0.5 to x=2.0 -->
+    <model name="wall_h_y0_5_x0_5">
+      <static>true</static>
+      <pose>1.25 0.5 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>1.5 0.02 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>1.5 0.02 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Horizontal wall at y=0.5, x=2.5 to x=3.0 -->
+    <model name="wall_h_y0_5_x2_5">
+      <static>true</static>
+      <pose>2.75 0.5 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.5 0.02 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.5 0.02 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ========== INTERNAL VERTICAL WALLS ========== -->
+    
+    <!-- Vertical wall at x=0.5, y=2.0 to y=2.5 -->
+    <model name="wall_v_x0_5_y2_0">
+      <static>true</static>
+      <pose>0.5 2.25 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.02 0.5 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.02 0.5 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Vertical wall at x=1.0, y=1.5 to y=2.0 -->
+    <model name="wall_v_x1_0_y1_5">
+      <static>true</static>
+      <pose>1.0 1.75 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.02 0.5 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.02 0.5 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Vertical wall at x=1.5, y=1.0 to y=1.5 -->
+    <model name="wall_v_x1_5_y1_0">
+      <static>true</static>
+      <pose>1.5 1.25 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.02 0.5 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.02 0.5 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Vertical wall at x=2.0, y=1.5 to y=2.0 -->
+    <model name="wall_v_x2_0_y1_5">
+      <static>true</static>
+      <pose>2.0 1.75 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.02 0.5 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.02 0.5 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Vertical wall at x=2.5, y=1.5 to y=2.0 -->
+    <model name="wall_v_x2_5_y1_5">
+      <static>true</static>
+      <pose>2.5 1.75 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.02 0.5 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.02 0.5 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Vertical wall at x=2.5, y=0 to y=0.5 -->
+    <model name="wall_v_x2_5_y0_0">
+      <static>true</static>
+      <pose>2.5 0.25 0.125 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.02 0.5 0.25</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.02 0.5 0.25</size></box>
+          </geometry>
+          <material>
+            <ambient>0.2 0.2 0.2 1</ambient>
+            <diffuse>0.4 0.4 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
 </sdf>

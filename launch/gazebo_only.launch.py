@@ -47,7 +47,7 @@ def generate_launch_description():
         output='screen'
     )
     
-    # Spawn robot - delayed to ensure robot_state_publisher is ready
+    # Spawn robot at center of maze - delayed to ensure robot_state_publisher is ready
     spawn_robot = TimerAction(
         period=3.0,
         actions=[
@@ -57,8 +57,8 @@ def generate_launch_description():
                 arguments=[
                     '-name', 'turtlebot3_burger',
                     '-topic', 'robot_description',
-                    '-x', '0.5',
-                    '-y', '0.5',
+                    '-x', '1.5',
+                    '-y', '1.5',
                     '-z', '0.01'
                 ],
                 output='screen'
