@@ -8,11 +8,12 @@ Launches Gazebo, TurtleBot3, SLAM, and Navigation stack
 import os
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, ExecuteProcess, TimerAction
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.conditions import IfCondition, UnlessCondition
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
+from launch_ros.parameter_descriptions import ParameterValue
 from ament_index_python.packages import get_package_share_directory
 
 
@@ -75,10 +76,10 @@ def generate_launch_description():
     # Robot description
     urdf_file = os.path.join(pkg_dir, 'urdf', 'turtlebot3_burger.urdf.xacro')
     
-    # Process URDF
-    robot_description_command = ExecuteProcess(
-        cmd=['xacro', urdf_file],
-        output='screen'
+    # Process URDF with xacro
+    robot_description = ParameterValue(
+        Command(['xacro ', urdf_file]),
+        value_type=str
     )
     
     # Robot state publisher
@@ -89,10 +90,7 @@ def generate_launch_description():
         output='screen',
         parameters=[{
             'use_sim_time': use_sim_time,
-            'robot_description': ExecuteProcess(
-                cmd=['xacro', urdf_file],
-                output='screen'
-            ).output
+            'robot_description': robot_description
         }]
     )
     
@@ -107,15 +105,15 @@ def generate_launch_description():
         output='screen'
     )
     
-    # Spawn robot in Gazebo
+    # Spawn robot in Gazebo at center of maze
     spawn_robot = Node(
         package='ros_gz_sim',
         executable='create',
         arguments=[
             '-name', 'turtlebot3_burger',
-            '-topic', '/robot_description',
-            '-x', '0.5',
-            '-y', '0.5',
+            '-topic', 'robot_description',
+            '-x', '1.5',
+            '-y', '1.5',
             '-z', '0.01'
         ],
         output='screen'
